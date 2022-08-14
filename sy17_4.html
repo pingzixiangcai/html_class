@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style type="text/css">
+        #imgBox {
+            width: 300px;
+            height: 200px;
+        }
+
+        #imgBox img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #index {
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="imgBox">
+        <img src="" id="img" />
+    </div>
+    <div id="index">第1张</div>
+    <script>
+
+        var imgBox = document.querySelector('img');
+        var div = document.querySelector('#index');
+
+        var imgs = ['./img/a.jpg', './img/b.jpg', './img/c.gif', './img/d.gif'];
+        var imgIndex = 0;
+        imgBox.src = imgs[imgIndex];
+        var t = setInterval(changeImg, 2000);
+
+        function changeImg() {
+            imgIndex++;
+            if (imgIndex == imgs.length) {
+                imgIndex = 0;
+            }
+            imgBox.src = imgs[imgIndex];
+            div.innerHTML = '第' + (imgIndex + 1) + '张';
+        }
+    </script>
+</body>
+
+</html>

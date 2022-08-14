@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间问好</title>
+    <script language="javaScript">
+    var now = new Date();
+    var hour = now.getHours();
+    if (hour>=0 && hour<=12)
+         document.write("早上好，哦哈哟！");
+    if (hour>12 && hour<=18)
+         document.write("下午好！");
+    if (hour>18 && hour<24)
+         document.write("晚上好！");
+    document.write("<p>今天日期:"+(now.getYear()+1900)+"年"+(now.getMonth()+1)+"月"+now.getDate()+"日");
+    document.write("<P>当前时间:"+now.getHours()+"点"+now.getMinutes()+"分");
+    </script>
+</head>
+<body>
+</body>
+</html>

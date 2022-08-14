@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算符</title>
+    <script language ="Javascript">
+        function calcu()
+        {
+        var numb1=document.calc.num1.value;
+        var numb2=document.calc.num2.value;
+        var total =parseFloat(numb1)*parseFlase(numb2);
+        document.calc.result.value=total;
+        if((total>500)&&(total<=1000))
+        alert("购买总价超过500\n支付时将赠送超级Q币2枚!");
+        if((total>1000)&&(total<=2000))
+        alert("购买总价超过1000\n支付时将赠送1BM光电智能鼠标一只!");
+        if((total>2000))
+        alert("购买总价超过2000\n请直接与贵宾台联系！");
+        }
+    </script>
+</head>
+
+<body>
+<form action=""method ="post" name="myform">
+    <p>第一个数<input name ="name1" type="text">
+        <br>第二个数<input name ="name2" type="text">
+    </p>
+    <p>
+        <input name="addButton" type="button" value="+" onClick="compute('+')" >
+        <input name="addButton" type="button" value="-" onClick="compute('-')" >
+        <input name="addButton" type="button" value="*" onClick="compute('*')" >
+        <input name="addButton" type="button" value="/" onClick="compute('/')" >
+    </p>
+    <p>计算结果<input name ="result" type="text"></p>
+</form>
+
+</body>
+</html>
+
+

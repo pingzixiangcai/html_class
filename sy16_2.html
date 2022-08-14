@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的应用</title>
+        <script language ="Javascript">
+        function compute(op)
+        {
+        var num1,num2;
+        num1=parseFloat(document.myform.num1.value);
+        num2=parseFloat(document.myform.num2.value);
+        if(op=="+")
+        document.myform.result.value=num1+num2;
+        if(op=="-")
+        document.myform.result.value=num1-num2;
+        if(op=="*")
+        document.myform.result.value=num1*num2;
+        if(op=="/" && num2!=0)
+        document.myform.result.value=num1/num2;
+        }
+    </script>
+</head>
+
+<body>
+<form action=""method ="post" name="myform">
+    <p>第一个数<input name ="name1" type="text">
+        <br>第二个数<input name ="name2" type="text">
+    </p>
+    <p>
+        <input name="addButton" type="button" value="+" onClick="compute('+')" >
+        <input name="addButton" type="button" value="-" onClick="compute('-')" >
+        <input name="addButton" type="button" value="*" onClick="compute('*')" >
+        <input name="addButton" type="button" value="/" onClick="compute('/')" >
+    </p>
+    <p>计算结果<input name ="result" type="text"></p>
+</form>
+
+</body>
+</html>

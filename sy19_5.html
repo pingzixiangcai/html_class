@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标焦点</title>
+    <script language="javascript">
+        function myfun1()
+        {
+        if(document.myform.card.value=="请注意格式:10XXXXXX")
+        document.myform.card.value="";
+        }
+        function myfun2()
+        {
+        var a = document.myform.card.value;
+        if(a.substr(0,2)!="10"||isNaN(a))
+        {
+        alert("格式错误，请重新输入") ;
+        document.myform.card.focus();
+        }
+        }
+    </script>
+
+    <STYLE type="text/css">
+<!--
+input
+{
+  background-color: #55FFFF;
+  font-size: 20px;
+  border: 1px solid;
+}
+-->
+</STYLE>
+
+</head>
+<body>
+<FORM name="myform">
+<H2>卡号：
+<INPUT name = card type = text  onFocus="myfun1( )“
+  value="请注意格式：10xxxxxx“  onBlur="myfun2( )" >
+ <BR>
+  密码： <INPUT name = pass type = text >
+</H2>
+</FORM>
+
+</body>
+</html>
